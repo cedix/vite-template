@@ -1,0 +1,9 @@
+{
+  "eslintIntegration": true,
+  "jsxSingleQuote": true,
+  "printWidth": 150,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "vueIndentScriptAndStyle": true
+}
