@@ -31,13 +31,15 @@
                 >
                   <span>Expandable menu</span>
                   <!--
-                Heroicon name: solid/chevron-down
-
-                Item active: "text-gray-600", Item inactive: "text-gray-400"
-              -->
+                  Heroicon name: solid/chevron-down
+                  -->
                   <svg
                     class="ml-2 h-5 w-5 group-hover:text-gray-500"
-                    :class="isExpandableMenuVisible ? 'text-gray-600' : 'text-gray-400'"
+                    :class="
+                      isExpandableMenuVisible
+                        ? 'text-gray-600 transition ease-out duration-200 transform rotate-180'
+                        : 'text-gray-400 transition ease-in duration-150 transform rotate-0'
+                    "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
