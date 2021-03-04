@@ -12,14 +12,14 @@
   <header>
     <div class="relative bg-white">
       <div class="relative z-20 shadow">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 space-x-10">
           <div>
             <a href="#" class="flex">
               <span class="sr-only">Workflow</span>
               <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="" />
             </a>
           </div>
-          <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
+          <div class="flex-1 flex items-center justify-between">
             <nav class="flex space-x-10">
               <div class="relative">
                 <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
