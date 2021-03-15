@@ -2,6 +2,14 @@
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
 
+## Features
+
+- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+- [Vuex 4](https://next.vuex.vuejs.org/)
+- [Tailwind CSS v2.0](https://tailwindcss.com/)
+- [File based routing](./src/pages) - with [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)
+- [Layout system](./src/layouts) - with [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
