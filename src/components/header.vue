@@ -23,7 +23,6 @@
           <div class="flex-1 flex items-center justify-between">
             <nav class="flex space-x-10">
               <div class="relative">
-                <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                 <button
                   type="button"
                   class="group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
