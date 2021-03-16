@@ -5,10 +5,8 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <TheHeader />
-    <main class="flex-1 bg-gray-50">
-      <div class="max-w-7xl m-auto">
-        <router-view />
-      </div>
+    <main class="flex flex-1 bg-gray-50">
+      <router-view class="w-full" />
     </main>
   </div>
 </template>

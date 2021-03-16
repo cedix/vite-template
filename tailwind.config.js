@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: (theme) => ({
+        about: "url('assets/images/about.svg')",
+      }),
       colors: {
         apple: colors.green,
       },
