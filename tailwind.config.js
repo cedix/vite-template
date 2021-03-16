@@ -7,11 +7,11 @@ module.exports = {
     extend: {
       colors: {
         apple: colors.green,
-      }
+      },
     },
   },
-  variants: {
-    extend: {},
-  },
+  // variants: {
+  //   extend: {},
+  // },
   plugins: [],
 }
