@@ -6,7 +6,7 @@
     <div class="absolute w-full h-full flex">
       <img class="justify-center m-auto opacity-40" :src="imgAbout" alt="" />
     </div>
-    <div class="relative max-w-3xl mx-auto px-4 py-5">
+    <div class="relative max-w-3xl mx-auto p-5">
       <h1 class="text-2xl mb-4">About</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue nibh augue, vitae cursus nulla rhoncus sed. Morbi tincidunt eros vel
