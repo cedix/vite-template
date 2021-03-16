@@ -1,5 +1,6 @@
 <script setup>
-  // import { ref } from 'vue'
+  import imgLogo from '~/assets/images/logo.svg'
+
   ref: isExpandableMenuVisible = false
 
   const toggleExpandableMenu = () => {
@@ -14,10 +15,10 @@
       <div class="relative z-20 shadow">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 space-x-10">
           <div>
-            <a href="#" class="flex">
+            <router-link to="/" class="flex">
               <span class="sr-only">Workflow</span>
-              <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="" />
-            </a>
+              <img class="h-10 w-auto transform transition-transform hover:scale-110 active:scale-95" :src="imgLogo" alt="" />
+            </router-link>
           </div>
           <div class="flex-1 flex items-center justify-between">
             <nav class="flex space-x-10">
@@ -49,8 +50,7 @@
                   </svg>
                 </button>
               </div>
-              <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Menu 1</a>
-              <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Menu 2</a>
+              <router-link to="/about" class="text-base font-medium text-gray-500 hover:text-gray-900">About</router-link>
             </nav>
             <div class="flex items-center md:ml-12">
               <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
