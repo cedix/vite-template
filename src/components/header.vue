@@ -13,7 +13,7 @@
   <header>
     <div class="relative bg-white">
       <div class="relative z-20 shadow">
-        <div class="max-w-7xl mx-auto flex justify-between items-center py-5 space-x-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 space-x-10">
           <div>
             <router-link to="/" class="flex">
               <span class="sr-only">Workflow</span>

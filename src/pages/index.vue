@@ -24,7 +24,7 @@
 </script>
 
 <template>
-  <div class="px-4 py-5">
+  <div class="px-4 py-5 max-w-5xl mx-auto">
     <h1 class="text-2xl mb-4">Vite Page template</h1>
     <div class="grid grid-cols-3 gap-16">
       <div class="flex flex-col justify-center">
