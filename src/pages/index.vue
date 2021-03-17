@@ -25,7 +25,12 @@
 
 <template>
   <div class="p-5 max-w-5xl mx-auto">
-    <h1 class="text-2xl mb-4">Vite Page template</h1>
+    <div class="flex">
+      <h1 class="text-2xl mb-4">Vite Page template</h1>
+      <div class="flex-1 mb-4 flex items-end justify-end">
+        <span class="text-sm text-gray-400">Vuex example</span>
+      </div>
+    </div>
     <div class="grid grid-cols-3 gap-16">
       <div class="flex flex-col justify-center">
         <div class="bg-white overflow-hidden shadow rounded-lg">
