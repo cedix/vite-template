@@ -50,6 +50,8 @@
                 </button>
               </div>
               <router-link to="/about" class="text-base font-medium text-gray-500 hover:text-gray-900">About</router-link>
+              <router-link to="/blank" class="text-base font-medium text-gray-500 hover:text-gray-900">Blank layout</router-link>
+              <router-link to="/fake" class="text-base font-medium text-gray-500 hover:text-gray-900">Fake link</router-link>
             </nav>
             <div class="flex items-center md:ml-12">
               <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
