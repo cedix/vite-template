@@ -3,6 +3,13 @@
   import { computed } from 'vue'
   import { useStore } from '~/store'
 
+  // Components
+  import { BookOpenIcon, TemplateIcon, UsersIcon } from '@heroicons/vue/outline'
+  import VButton from '~/components/UI/button.vue'
+
+  // Model
+  import { Size } from '~/model/size'
+
   // Vuex Store
   const store = useStore()
 
@@ -39,13 +46,13 @@
             <dd class="mt-1 text-3xl font-semibold text-gray-900">{{ countGlobal }}</dd>
           </div>
         </div>
-        <button
-          type="button"
-          class="mt-4 block items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          @click="incrementGlobalCounter"
-        >
-          Increment Global Counter
-        </button>
+        <div class="flex items-center justify-center">
+          <v-button class="mt-4" :size="Size.l" text="Increment Global Counter" @click="incrementGlobalCounter">
+            <template #leadingIcon>
+              <BookOpenIcon class="w-6 h-6" />
+            </template>
+          </v-button>
+        </div>
       </div>
       <div class="flex flex-col justify-center">
         <div class="bg-white overflow-hidden shadow rounded-lg">
@@ -54,13 +61,13 @@
             <dd class="mt-1 text-3xl font-semibold text-gray-900">{{ countUsers }}</dd>
           </div>
         </div>
-        <button
-          type="button"
-          class="mt-4 block items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          @click="incrementCountUsers"
-        >
-          Increment nb users
-        </button>
+        <div class="flex items-center justify-center">
+          <v-button class="mt-4" :size="Size.l" text="Increment nb users" @click="incrementCountUsers">
+            <template #leadingIcon>
+              <UsersIcon class="w-6 h-6" />
+            </template>
+          </v-button>
+        </div>
       </div>
       <div class="flex flex-col justify-center">
         <div class="bg-white overflow-hidden shadow rounded-lg">
@@ -69,13 +76,14 @@
             <dd class="mt-1 text-3xl font-semibold text-gray-900">{{ countProjects }}</dd>
           </div>
         </div>
-        <button
-          type="button"
-          class="mt-4 block items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          @click="incrementCountProjects"
-        >
-          Increment nb projects
-        </button>
+        <div class="flex items-center justify-center">
+          <v-button class="mt-4" :size="Size.l" @click="incrementCountProjects">
+            <template #default> Increment nb projects </template>
+            <template #leadingIcon>
+              <TemplateIcon class="w-6 h-6" />
+            </template>
+          </v-button>
+        </div>
       </div>
     </div>
     <div></div>
