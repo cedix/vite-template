@@ -6,9 +6,18 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 - [Vuex 4](https://next.vuex.vuejs.org/)
-- [Tailwind CSS v2.0](https://tailwindcss.com/)
+- [Tailwind CSS v2.0](https://tailwindcss.com/) - with @tailwindcss/jit plugin for faster compile times
+- [HeroIcons](@heroicons/vue) - with @heroicons/vue packager for an easy integration with vue
 - [File based routing](./src/pages) - with [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)
 - [Layout system](./src/layouts) - with [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+
+### Using `<script setup>`
+
+[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. Be carefull when using it and check the RFC regularly for any update.
+
+### Using ref: sugar
+
+[ref: sugar](https://github.com/vuejs/rfcs/pull/228) is a feature that is currently in RFC stage. Be carefull when using it and check the RFC regularly for any update.
 
 ## Recommended IDE Setup
 
@@ -16,7 +25,7 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 ### If Using `<script setup>`
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+To get proper IDE support for the `<script setup>` syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
 
 ## Type Support For `.vue` Imports in TS
 
