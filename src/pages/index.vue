@@ -1,3 +1,4 @@
+<!-- Using experimental <script setup> syntax -->
 <script setup>
   // Imports
   import { computed } from 'vue'

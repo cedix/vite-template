@@ -1,3 +1,4 @@
+<!-- Using experimental <script setup> syntax -->
 <script setup>
   import imgAbout from '~/assets/images/about.svg'
 </script>

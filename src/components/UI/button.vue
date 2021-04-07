@@ -1,3 +1,4 @@
+<!-- Using experimental <script setup> syntax -->
 <script setup>
   import { defineProps } from 'vue'
   import { Size } from '~/model/size'
