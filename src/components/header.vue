@@ -1,4 +1,6 @@
+<!-- Using experimental <script setup> syntax -->
 <script setup>
+  import { LinkIcon, PuzzleIcon, TemplateIcon } from '@heroicons/vue/outline'
   import imgLogo from '~/assets/images/logo.svg'
 
   ref: isExpandableMenuVisible = false
@@ -29,7 +31,7 @@
                   :class="isExpandableMenuVisible ? 'text-gray-900' : 'text-gray-500'"
                   @click="toggleExpandableMenu"
                 >
-                  <span>Expandable menu</span>
+                  <span>Template features</span>
                   <!--
                   Heroicon name: solid/chevron-down
                   -->
@@ -50,8 +52,6 @@
                 </button>
               </div>
               <router-link to="/about" class="text-base font-medium text-gray-500 hover:text-gray-900">About</router-link>
-              <router-link to="/blank" class="text-base font-medium text-gray-500 hover:text-gray-900">Blank layout</router-link>
-              <router-link to="/fake" class="text-base font-medium text-gray-500 hover:text-gray-900">Fake link</router-link>
             </nav>
             <div class="flex items-center md:ml-12">
               <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
@@ -78,104 +78,60 @@
         <div v-show="isExpandableMenuVisible" class="hidden md:block absolute z-10 inset-x-0 transform shadow-lg">
           <div class="bg-white">
             <div class="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
-              <!-- Action : Analytics -->
-              <a href="#" class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50">
+              <!-- Action : Blank layout -->
+              <router-link to="/blank" class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50">
                 <div class="flex md:h-full lg:flex-col">
                   <div class="flex-shrink-0">
                     <span class="inline-flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                      <!-- Heroicon name: outline/chart-bar -->
-                      <svg
-                        class="h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                        />
-                      </svg>
+                      <TemplateIcon class="h-6 w-6" />
                     </span>
                   </div>
                   <div class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                     <div>
-                      <p class="text-base font-medium text-gray-900">Analytics</p>
-                      <p class="mt-1 text-sm text-gray-500">Get a better understanding of where your traffic is coming from.</p>
+                      <p class="text-base font-medium text-gray-900">Blank layout</p>
+                      <p class="mt-1 text-sm text-gray-500">Demonstrates how a blank layout renders.</p>
                     </div>
                     <p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">Learn more <span aria-hidden="true">&rarr;</span></p>
                   </div>
                 </div>
-              </a>
+              </router-link>
 
-              <!-- Action : Engagement -->
-              <a href="#" class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50">
+              <!-- Action : Fake link -->
+              <router-link to="/fake" class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50">
                 <div class="flex md:h-full lg:flex-col">
                   <div class="flex-shrink-0">
                     <span class="inline-flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                      <!-- Heroicon name: outline/cursor-click -->
-                      <svg
-                        class="h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                        />
-                      </svg>
+                      <LinkIcon class="h-6 w-6" />
                     </span>
                   </div>
                   <div class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                     <div>
-                      <p class="text-base font-medium text-gray-900">Engagement</p>
-                      <p class="mt-1 text-sm text-gray-500">Speak directly to your customers in a more meaningful way.</p>
+                      <p class="text-base font-medium text-gray-900">Fake link</p>
+                      <p class="mt-1 text-sm text-gray-500">Fake link that leads to a 404 error page.</p>
                     </div>
                     <p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">Learn more <span aria-hidden="true">&rarr;</span></p>
                   </div>
                 </div>
-              </a>
+              </router-link>
 
-              <!-- Action : Security -->
-              <a href="#" class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50">
+              <!-- Action : Composition API -->
+              <!-- Don't forget to toggle the menu once clicked on the menu that leads to a new page -->
+              <router-link to="/composition" class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50" @click="toggleExpandableMenu">
                 <div class="flex md:h-full lg:flex-col">
                   <div class="flex-shrink-0">
                     <span class="inline-flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                      <!-- Heroicon name: outline/shield-check -->
-                      <svg
-                        class="h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                        />
-                      </svg>
+                      <PuzzleIcon class="h-6 w-6" />
                     </span>
                   </div>
                   <div class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                     <div>
-                      <p class="text-base font-medium text-gray-900">Security</p>
-                      <p class="mt-1 text-sm text-gray-500">Your customers&#039; data will be safe and secure.</p>
+                      <p class="text-base font-medium text-gray-900">Composition API</p>
+                      <p class="mt-1 text-sm text-gray-500">Page demonstrating how to use vue 3 composition API.</p>
                     </div>
                     <p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">Learn more <span aria-hidden="true">&rarr;</span></p>
                   </div>
                 </div>
-              </a>
+              </router-link>
 
               <!-- Action : Integrations -->
               <a href="#" class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50">
