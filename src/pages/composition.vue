@@ -43,21 +43,21 @@
       </div>
     </div>
     <div>
-      <!-- Fitler -->
+      <!-- Filter -->
       <div>
         <label for="filter_planets" class="block text-sm font-medium text-gray-700">Filter</label>
         <div class="mt-1 relative rounded-md shadow-sm">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <FilterIcon class="h-5 w-5 text-gray-400" />
+          </div>
           <input
             type="text"
             name="filter_planets"
             id="filter_planets"
             v-model="filter"
-            class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-10 sm:text-sm border-gray-300 rounded-md"
+            class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
             placeholder="Filter planets names..."
           />
-          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-            <FilterIcon class="h-5 w-5 text-gray-400" />
-          </div>
         </div>
       </div>
       <!-- List Planets -->
