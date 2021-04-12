@@ -4,6 +4,9 @@
   import { fetchPlanets, filterPlanets, sortPlanets } from '~/api/planets'
 
   export default defineComponent({
+    components: {
+      FilterIcon,
+    },
     setup() {
       // Variables
       let filter = ref('')
@@ -25,7 +28,6 @@
       return {
         filter,
         filteredPlanets,
-        FilterIcon,
         getPlanets,
       }
     },
