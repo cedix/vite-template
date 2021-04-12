@@ -1,15 +1,19 @@
 <script>
   import { computed, defineComponent, onMounted, ref } from 'vue'
   import { FilterIcon } from '@heroicons/vue/outline'
+  import Loading from 'vue3-loading-overlay'
+  import 'vue3-loading-overlay/dist/vue3-loading-overlay.css'
   import { fetchPlanets, filterPlanets, sortPlanets } from '~/api/planets'
 
   export default defineComponent({
     components: {
       FilterIcon,
+      Loading,
     },
     setup() {
       // Variables
       let filter = ref('')
+      let isLoading = ref(false)
       let planets = ref([])
 
       // Computed Properties
@@ -17,7 +21,10 @@
 
       // Functions
       async function getPlanets() {
+        isLoading.value = true
+        await new Promise((resolve) => setTimeout(resolve, 3000)) // is here to let the loading overlay being displayed
         planets.value = await fetchPlanets()
+        isLoading.value = false
       }
 
       // Lifecycle hooks
@@ -29,6 +36,7 @@
         filter,
         filteredPlanets,
         getPlanets,
+        isLoading,
       }
     },
   })
@@ -36,12 +44,16 @@
 
 <template>
   <div class="p-5 max-w-5xl mx-auto">
+    <Loading :active="isLoading" :can-cancel="false" :is-full-page="true"></Loading>
+    <!-- Title -->
     <div class="flex">
       <h1 class="text-2xl mb-4">Star Wars Planets</h1>
       <div class="flex-1 mb-4 flex items-end justify-end">
         <span class="text-sm text-gray-400">Composition API Template</span>
       </div>
     </div>
+
+    <!-- Page content -->
     <div>
       <!-- Filter -->
       <div>
@@ -61,7 +73,7 @@
         </div>
       </div>
       <!-- List Planets -->
-      <div class="mt-4 grid grid-cols-5 gap-4">
+      <div class="mt-4 grid grid-cols-5 gap-4 vld-parent">
         <div v-for="planet in filteredPlanets" :key="planet.name" class="w-full flex items-center justify-center h-24 bg-white rounded shadow">
           <span>{{ planet.name }}</span>
         </div>
