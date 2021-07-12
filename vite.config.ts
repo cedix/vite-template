@@ -14,5 +14,5 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
-  plugins: [vue(), Layouts(), Pages()],
+  plugins: [vue({ script: { refSugar: true } }), Layouts(), Pages()],
 })
